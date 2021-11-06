@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public class AbstractFactoryDriver implements CommandLineRunner {
+public class AbstractFactoryDriver {
 
     private final FactoryProducer factoryProducer;
 
@@ -17,11 +17,11 @@ public class AbstractFactoryDriver implements CommandLineRunner {
         this.factoryProducer = factoryProducer;
     }
 
-    @Override
-    public void run(String... args) throws Exception {
+
+    public void run() {
 
         ClothesFactory clothesFactory = factoryProducer.getClothesFactory(ClothesMaterialType.COTTON);
-        log.info("factory clothes: {}",clothesFactory.createDress());
+        log.info("factory clothes: {}", clothesFactory.createDress());
 
     }
 }

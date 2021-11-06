@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public class FactoryDriver implements CommandLineRunner {
+public class FactoryDriver {
 
     private final SampleService service;
 
@@ -16,9 +16,9 @@ public class FactoryDriver implements CommandLineRunner {
         this.service = service;
     }
 
-    @Override
-    public void run(String... args) throws Exception {
-        log.info(this.service.createDb(DbType.ORACLE));
+
+    public void run() {
+        log.info(service.createDb(DbType.ORACLE));
     }
 
 }
