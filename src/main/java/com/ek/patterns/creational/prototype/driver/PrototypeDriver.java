@@ -1,5 +1,6 @@
 package com.ek.patterns.creational.prototype.driver;
 
+import com.ek.patterns.Driver;
 import com.ek.patterns.creational.prototype.model.GameObject;
 import com.ek.patterns.creational.prototype.model.GameObjectX;
 import lombok.extern.slf4j.Slf4j;
@@ -7,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public class PrototypeDriver {
+public class PrototypeDriver implements Driver {
 
     public static final String MASS = "3333";
     public static final String MASS2 = "4444";

@@ -1,5 +1,6 @@
 package com.ek.patterns.creational.factory.driver;
 
+import com.ek.patterns.Driver;
 import com.ek.patterns.creational.factory.factory.DbType;
 import com.ek.patterns.creational.factory.service.SampleService;
 import lombok.extern.slf4j.Slf4j;
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public class FactoryDriver {
+public class FactoryDriver implements Driver {
 
     private final SampleService service;
 

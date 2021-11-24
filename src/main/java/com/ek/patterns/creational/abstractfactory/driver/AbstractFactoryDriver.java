@@ -1,5 +1,6 @@
 package com.ek.patterns.creational.abstractfactory.driver;
 
+import com.ek.patterns.Driver;
 import com.ek.patterns.creational.abstractfactory.common.ClothesMaterialType;
 import com.ek.patterns.creational.abstractfactory.factory.ClothesFactory;
 import com.ek.patterns.creational.abstractfactory.factory.producer.FactoryProducer;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public class AbstractFactoryDriver {
+public class AbstractFactoryDriver implements Driver {
 
     private final FactoryProducer factoryProducer;
 
